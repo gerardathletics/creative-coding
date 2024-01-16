@@ -33,7 +33,7 @@ const sketch = () => {
             context.save();
             context.translate(x, y);
             context.rotate(-angle);
-            context.scale(range(0, 2), range(0.2, 4));
+            context.scale(range(1, 2), range(1, 2));
 
             context.beginPath();
             context.rect(-w * 0.5, -h * 0.5, w, h);
@@ -42,7 +42,7 @@ const sketch = () => {
 
             context.save();
             context.translate(cx, cy);
-            context.rotate(-angle);
+            context.rotate(-angle + degToRad(45));
 
             context.lineWidth = range(1, 10);
             context.strokeStyle = '#548687';
