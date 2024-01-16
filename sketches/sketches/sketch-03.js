@@ -1,3 +1,5 @@
+// Sketch agents
+
 const canvasSketch = require('canvas-sketch');
 const random = require('canvas-sketch-util/random');
 
