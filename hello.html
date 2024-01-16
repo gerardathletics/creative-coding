@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+
+    <h1>Creative Coding</h1>
+    <canvas width="800" height="800"></canvas>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const context = canvas.getContext('2d');
+
+        const width = 60;
+        const height = 60;
+        const gap = 20;
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+
+
+                let x = 100 + (width + gap) * i;
+                let y = 100 + (height + gap) * j;
+
+                context.beginPath();
+                context.rect(x, y, width, height);
+                context.stroke();
+
+                if (i > 0 && i < 4 && j > 0 && j < 4) {
+                    context.beginPath();
+                    context.rect(x + 10, y + 10, width - 20, height - 20);
+                    context.stroke();
+                }
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
